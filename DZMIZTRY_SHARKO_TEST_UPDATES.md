@@ -9,3 +9,6 @@
 
 Possible architecture improvements:
 Use @DynamicColumns or separate table for normalized fields: chain_id, chain_deid, chain_name.
+
+TODO:
+Fix the unit tests.
