@@ -1,4 +1,4 @@
-1. Implemented pnpm package manages
+1. Implemented pnpm package manager
 2. Updated package versions, fixed vulnerabilities
 3. Implemented Config Service, .env (it's possible to use Secret Manager instead)
 4. Refactored token.seeder.ts, token.schema.ts, token-price-update-message.ts
