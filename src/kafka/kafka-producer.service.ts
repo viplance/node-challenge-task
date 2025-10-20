@@ -13,9 +13,11 @@ export class KafkaProducerService implements OnModuleDestroy {
   private readonly topic: string = "token-price-updates";
 
   constructor(private configService: ConfigService) {
+    const kafkaHost = this.configService.get<string>("KAFKA_HOST");
+    const kafkaPort = this.configService.get<string>("KAFKA_PORT");
     const kafka = new Kafka({
       clientId: this.configService.get<string>("KAFKA_CLIENT_ID"),
-      brokers: [this.configService.get<string>("KAFKA_BROKER")],
+      brokers: [`${kafkaHost}:${kafkaPort}`],
     });
 
     this.producer = kafka.producer();

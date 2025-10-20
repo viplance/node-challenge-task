@@ -21,7 +21,10 @@
     "migration:create": "npm run typeorm -- migration:create",
     "migration:run": "ts-node -r tsconfig-paths/register src/migrations/run-migrations.ts",
     "migration:revert": "npm run typeorm -- migration:revert -d src/data/data-source.ts",
-    "db:seed": "ts-node -r tsconfig-paths/register src/data/seed.ts"
+    "db:seed": "ts-node -r tsconfig-paths/register src/data/seed.ts",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down -v"
   },
   "keywords": [
     "nestjs",
